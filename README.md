@@ -1,5 +1,18 @@
 # README
 
+## Requirements
+Ruby (Version 3.1.4 and above)
+Rails (Version 7.1.3.2)
+
+## Installation
+```
+git clone https://github.com/pjavadi84/crosswords
+cd crosswords
+bundle install
+rails db:create db:migrate
+rails s
+```
+
 # A Crossword Puzzle
 
 This challenge should be solved using Ruby, but you can use another programming language if you prefer.
