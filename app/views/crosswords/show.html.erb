@@ -1,2 +1,21 @@
-<h1>Crosswords</h1>
-<pre><%= @crossword_display %></pre>
+<!-- app/views/crosswords/show.html.erb -->
+<h1>Create Your Crossword Puzzle</h1>
+
+<%= form_with(url: crosswords_show_path, method: :get) do |form| %>
+  <div>
+    <%= form.label :horizontal, "Horizontal Word" %>
+    <%= form.text_field :horizontal %>
+  </div>
+  <div>
+    <%= form.label :vertical, "Vertical Word" %>
+    <%= form.text_field :vertical %>
+  </div>
+  <div>
+    <%= form.submit "Generate Crossword" %>
+  </div>
+<% end %>
+
+<% if @crossword_display %>
+  <h2>Your Crossword Puzzle:</h2>
+  <pre><%= @crossword_display %></pre>
+<% end %>
